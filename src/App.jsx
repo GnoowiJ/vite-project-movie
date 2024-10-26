@@ -7,11 +7,11 @@ import Header from './components/Header.jsx';
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header />
       <div className='app'>
         <Routes>
-          <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path='/movie/:id' element={<Detail />} />
         </Routes>
       </div>
