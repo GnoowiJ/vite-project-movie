@@ -13,7 +13,7 @@ export default function Home () {
     let month = String(today.getMonth()+1).padStart(2,'0');
     let date = String(today.getDate()-1).padStart(2,'0');
     let serchDate = `${year}${month}${date}`
-    const json = await ( await fetch(`http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=82ca741a2844c5c180a208137bb92bd7&targetDt=${serchDate}`)
+    const json = await ( await fetch(`https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=82ca741a2844c5c180a208137bb92bd7&targetDt=${serchDate}`)
   ).json()
     const list = json.boxOfficeResult.dailyBoxOfficeList
     setMovieList(list)
