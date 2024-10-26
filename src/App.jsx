@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css'
 import { BrowserRouter as  Router, Routes, Route, BrowserRouter} from "react-router-dom";
 import Home from './pages/Home.jsx';
@@ -7,7 +8,8 @@ import Header from './components/Header.jsx';
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter
+    basename = {process.env.PUBLIC_URL}>
       <Header />
       <div className='app'>
         <Routes>
