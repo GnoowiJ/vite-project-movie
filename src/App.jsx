@@ -11,7 +11,7 @@ function App() {
       <Header />
       <div className='app'>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
           <Route path='/movie/:id' element={<Detail />} />
         </Routes>
       </div>
