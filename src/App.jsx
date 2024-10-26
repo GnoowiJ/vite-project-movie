@@ -9,7 +9,7 @@ function App() {
 
   return (
     <BrowserRouter
-    basename={process.env.PUBLIC_URL}>
+    basename='/vite-project-movie'>
       <Header />
       <div className='app'>
         <Routes>
