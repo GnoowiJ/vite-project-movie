@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from '../components/Header';
 import Movie from '../components/Movie';
 
 export default function Home () {
@@ -7,18 +6,17 @@ export default function Home () {
   const [movieList, setMovieList] = useState([])
   const [moviePoster, setMoviePoster] = useState([])
 
+  let today = new Date();
+  let year = today.getFullYear();
+  let month = String(today.getMonth()+1).padStart(2,'0');
+  let date = String(today.getDate()-1).padStart(2,'0');
+  let serchDate = `${year}${month}${date}`
   const getMovie = async () => {
-    let today = new Date();
-    let year = today.getFullYear();
-    let month = String(today.getMonth()+1).padStart(2,'0');
-    let date = String(today.getDate()-1).padStart(2,'0');
-    let serchDate = `${year}${month}${date}`
-    const json = await ( await fetch(`https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=82ca741a2844c5c180a208137bb92bd7&targetDt=${serchDate}`)
+    const json = await ( await fetch(`https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=4b41397b7aaf1ee41dcd40c21314f501&targetDt=${serchDate}`)
   ).json()
     const list = json.boxOfficeResult.dailyBoxOfficeList
     setMovieList(list)
     setLoading(false)
-    
   }
   const getPoster = () => {
     fetch('https://dapi.kakao.com/v2/search/image')
@@ -30,7 +28,7 @@ export default function Home () {
   useEffect( () => {
   getMovie()
   }, [])
-  console.log(movieList);
+  // console.log(movieList);
   return (
     <div>
       { loading ? "loading..." 

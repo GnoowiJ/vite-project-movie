@@ -1,6 +1,6 @@
 #root {
   max-width: 100%;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   /* text-align: center; */
   box-sizing: border-box;
@@ -32,6 +32,7 @@ a, ul, Link, li, h1, h2, h3, h4, h5, div{
 /* app */
 .app{
   background-color: #141414;
+  min-width: 412px;
 }
 
 /* home */
