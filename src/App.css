@@ -73,3 +73,24 @@ a, ul, Link, li, h1, h2, h3, h4, h5, div{
 .content-btn:hover{
   cursor: pointer;
 }
+
+/* Detail */
+.detail{
+  color: #fff;
+  width: 100%;
+}
+.d-content{
+  width: 1200px;
+  margin : 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.d-title{
+  color: #fff;
+}
+.d-desc{
+  color: #fff;
+}

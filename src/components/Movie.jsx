@@ -12,7 +12,7 @@ export default function Movie ({idx, id, title, openDt, rank}) {
               <p>개봉일 : {openDt}</p>
               <p>순위 : {rank}</p>
             </div>
-            <Link to={`/movie/${id}`}><button type='button' className='content-btn'>상세 보기</button></Link>
+            <Link to={`/movie/${title}`}><button type='button' className='content-btn'>상세 보기</button></Link>
           </div>
         </div>
 

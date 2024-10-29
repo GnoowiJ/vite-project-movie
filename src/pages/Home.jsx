@@ -4,7 +4,7 @@ import Movie from '../components/Movie';
 export default function Home () {
   const [loading, setLoading] = useState(true)
   const [movieList, setMovieList] = useState([])
-  const [moviePoster, setMoviePoster] = useState([])
+
 
   let today = new Date();
   let year = today.getFullYear();
@@ -18,15 +18,11 @@ export default function Home () {
     setMovieList(list)
     setLoading(false)
   }
-  const getPoster = () => {
-    fetch('https://dapi.kakao.com/v2/search/image')
-    .then( res => res.json())
-    .then( img => setMoviePoster(img))
-  }
-  // console.log('moviePoset->', moviePoster);
+
   
   useEffect( () => {
   getMovie()
+
   }, [])
   // console.log(movieList);
   return (
