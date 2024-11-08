@@ -38,7 +38,7 @@ vite의 사용과 react의 숙달 및 해당 프로젝트의 배포를 위한 �
   
     출력 해야 되는 부분 각각 state변수를 새로 만들어서 저장후 출력, api호출이 되기 전에 loading state를 만들어서 화면 출력에 대한 안정성 추가
 
-- 이후 정상 접속 되는지 확인했으나 상세보기 누르면 데이터 정상 출력 되지 않고 개발자 도구에서 오류 확인
-- (Mixed Content: The page at 'https://gnoowij.github.io/vite-project-movie/movie/%EB%B2%A0%EB%86%88:%20%EB%9D%BC%EC%8A%A4%ED%8A%B8%20%EB%8C%84%EC%8A%A4' was loaded over HTTPS, but requested an insecure resource 'http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.js…%BC%EC%8A%A4%ED%8A%B8%20%EB%8C%84%EC%8A%A4&ServiceKey=99UC0FB521R3FT7V4CFG'. This request has been blocked; the content must be served over HTTPS.
+- 이후 정상 접속 되는지 확인했으나 상세보기 누르면 데이터 정상 출력 되지 않고 개발자 도구에서 오류 확인(Mixed Content: The page at 'https://gnoowij.github.io/vite-project-movie/movie/%EB%B2%A0%EB%86%88:%20%EB%9D%BC%EC%8A%A4%ED%8A%B8%20%EB%8C%84%EC%8A%A4' was loaded over HTTPS, but requested an insecure resource 'http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.js…%BC%EC%8A%A4%ED%8A%B8%20%EB%8C%84%EC%8A%A4&ServiceKey=99UC0FB521R3FT7V4CFG'. This request has been blocked; the content must be served over HTTPS.
 a	@	index-CTIrYiR1.js:67 )
+
  -> 해당 오류는 HTTPS로 로드된 페이지에서 HTTP 프로토콜을 사용하여 리소스를 요청할 때 발생하는 보안 문제임을 확인 / 상세 내용 api호출 링크에 http에서 https로 수정 후 이후 작동 확인해보니 정상작동 확인
