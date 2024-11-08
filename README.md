@@ -9,6 +9,7 @@ vite의 사용과 react의 숙달 및 해당 프로젝트의 배포를 위한 �
 ## ⚙️ 개발 환경
 - `React` 
 - `vite`
+- `github`
 - **IDE** : VSCode
 
 ## 📌 문제 상황
