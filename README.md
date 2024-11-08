@@ -12,6 +12,9 @@ vite의 사용과 react의 숙달 및 해당 프로젝트의 배포를 위한 �
 - `github`
 - **IDE** : VSCode
 
+# 배포 url
+- https://gnoowij.github.io/vite-project-movie/
+
 ## 📌 문제 상황
  - 10/26 배포시 문제 상황
    
