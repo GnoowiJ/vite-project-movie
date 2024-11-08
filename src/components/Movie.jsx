@@ -8,7 +8,7 @@ export default function Movie ({idx, id, title, openDt, rank}) {
         <div className='list-box'>
           <div key={idx} className='content'>
             <div>
-              <h3>{title}</h3>
+              <h3 className='c-title'>{title}</h3>
               <p>개봉일 : {openDt}</p>
               <p>순위 : {rank}</p>
             </div>

@@ -5,6 +5,11 @@
   /* text-align: center; */
   box-sizing: border-box;
 }
+*,html{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
 
 a, ul, Link, li, h1, h2, h3, h4, h5, div{
   color: #000;
@@ -33,6 +38,7 @@ a, ul, Link, li, h1, h2, h3, h4, h5, div{
 .app{
   background-color: #141414;
   min-width: 412px;
+  height: 100%;
 }
 
 /* home */
@@ -61,8 +67,12 @@ a, ul, Link, li, h1, h2, h3, h4, h5, div{
   border-radius: 8px;
   box-shadow: 5px 5px 15px #fff;
 }
+
 .content > div, .content > div > h3{
   color: #fff;
+}
+.content > div{
+  padding: 20px 0;
 }
 .content-btn{
   width: 100px;
@@ -78,9 +88,11 @@ a, ul, Link, li, h1, h2, h3, h4, h5, div{
 .detail{
   color: #fff;
   width: 100%;
+  padding: 10px;
+  height: 100vh;
 }
 .d-content{
-  width: 1200px;
+  max-width: 1200px;
   margin : 0 auto;
   display: flex;
   flex-direction: row;
