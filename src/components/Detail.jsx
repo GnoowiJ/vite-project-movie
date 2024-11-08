@@ -10,7 +10,7 @@ export default function Detail () {
   console.log('id->', id);
   
   const getPoster = async () => {
-    const json =  await (await fetch(`http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp?collection=kmdb_new2&detail=Y&query=${id}&ServiceKey=99UC0FB521R3FT7V4CFG`)
+    const json =  await (await fetch(`https://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp?collection=kmdb_new2&detail=Y&query=${id}&ServiceKey=99UC0FB521R3FT7V4CFG`)
     ).json()
     let result = json.Data[0].Result[0]
     setMovieInfo(result)
